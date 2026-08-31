@@ -56,7 +56,7 @@
       const type = form.dataset.demoForm;
       if (type === 'login') {
         form.closest('dialog')?.close();
-        const destination = form.dataset.redirect || 'employee-db-search.html';
+        const destination = form.dataset.redirect || 'employee-db-system.html';
         window.location.href = destination;
       } else {
         const name = form.querySelector('[name="name"]')?.value || 'New account';

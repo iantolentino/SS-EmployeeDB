@@ -12,7 +12,7 @@ Browser-based employee database prototype for managing:
 
 ## Start here
 
-Open `employee-db-login.html` to test the login flow. Successful login redirects to the centered search page, where people and departments can be searched.
+Open `employee-db-login.html` to test the login flow. Successful login redirects directly to the main employee database dashboard.
 
 Open `employee-db-system.html` to go directly to the merged command-center and employee-profile system.
 
