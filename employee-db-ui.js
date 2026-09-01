@@ -52,6 +52,16 @@
     });
   });
 
+  document.querySelectorAll('[data-sidebar-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const panel = document.getElementById(button.dataset.target);
+      if (!panel) return;
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      panel.hidden = isOpen;
+    });
+  });
+
   document.querySelectorAll('[data-open]').forEach((button) => {
     button.addEventListener('click', () => {
       const dialog = document.getElementById(button.dataset.open);
