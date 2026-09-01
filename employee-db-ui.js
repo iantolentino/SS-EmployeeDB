@@ -39,6 +39,12 @@
     button.addEventListener('click', () => setTheme(!document.body.classList.contains('dark')));
   });
 
+  document.querySelectorAll('[data-sso-login]').forEach((button) => {
+    button.addEventListener('click', () => {
+      window.location.href = button.dataset.redirect || 'employee-db-system.html';
+    });
+  });
+
   document.querySelectorAll('[data-nav]').forEach((link) => {
     link.addEventListener('click', () => {
       document.querySelectorAll('[data-nav]').forEach((item) => item.classList.remove('ui-active'));
