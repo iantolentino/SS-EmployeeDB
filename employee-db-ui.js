@@ -26,7 +26,9 @@
     document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
     document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
       button.setAttribute('aria-pressed', dark ? 'true' : 'false');
-      button.textContent = dark ? '\u2600 Light mode' : '\uD83C\uDF19 Dark mode';
+      button.setAttribute('aria-label', dark ? 'Dark mode active. Switch to light mode' : 'Light mode active. Switch to dark mode');
+      button.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      button.textContent = dark ? '\uD83C\uDF19' : '\u2600\uFE0F';
     });
     saveTheme(dark ? 'dark' : 'light');
   };
