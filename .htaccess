@@ -1,0 +1,10 @@
+Options -Indexes
+DirectoryIndex index.php
+<FilesMatch "^(config(?:\.example)?\.php|bootstrap\.php|views\.php|.*\.(sqlite|sqlite3|db)(-.*)?|.*\.log)$">
+    Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(?:data|\.git|\.local)(?:/|$) - [F,L]
+    RewriteRule ^employee-db-(?:login|system|accounts)\.html$ index.php [R=302,L]
+</IfModule>
